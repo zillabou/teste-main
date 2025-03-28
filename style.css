@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to top, #e6f5ff, #fff);
+    overflow: hidden;
+  }
+  
+  .container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 100px auto;
+    position: relative;
+    z-index: 5;
+  }
+  
+  h1 {
+    color: #50505c;
+    font-size: 2.2rem;
+  }
+  audio {
+    display: none;
+  }
+  
+  
+  button {
+    font-family: 'Roboto', sans-serif;
+    background: #010303;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #20213f;
+  }
+  
+  .digitando {
+    min-height: 80px;
+    font-size: 18px;
+    color: #333;
+    white-space: pre-wrap;
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .decoracoes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+ 
+  
+  /* Emojis girando (fixos no topo direito) */
+  .emojis {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    animation: girar 8s linear infinite;
+  }
+  
+  @keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .fotos-dinamicas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .foto-flutuante {
+    position: absolute;
+    bottom: -120px;
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: cover;
+    animation: fotoSubindo 10s linear forwards;
+    opacity: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  @keyframes fotoSubindo {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-50vh) rotate(15deg);
+    }
+    100% {
+      transform: translateY(-120vh) rotate(-15deg);
+      opacity: 0;
+    }
+  }
+  
+  
+  /* Emojis de aniversário voando dinamicamente */
+  .emoji-festa {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .emoji-flutuante {
+    position: absolute;
+    bottom: -50px;
+    font-size: 2.5rem;
+    opacity: 0;
+    animation: emojiAleatorio 6s linear forwards;
+  }
+  
+  @keyframes emojiAleatorio {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-50vh) rotate(15deg);
+    }
+    100% {
+      transform: translateY(-120vh) rotate(-15deg);
+      opacity: 0;
+    }
+  }
+  
