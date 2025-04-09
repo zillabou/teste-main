@@ -79,6 +79,9 @@ P.S.: Se você sorriu lendo isso... missão cumprida. Agora aproveita sua músic
     "assets/20.jpeg",
     "assets/21.jpeg",
     "assets/22.jpeg",
+    "assets/23.jpeg",
+    "assets/24.jpeg",
+    "assets/25.jpeg"
    
     
   ];
